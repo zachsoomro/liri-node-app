@@ -30,3 +30,13 @@ var movieOutput = function() {
     }
   );
 };
+function spotifyOutput(song) {
+  spotify
+    .search({
+      type: "track",
+      query: song
+    })
+    .then(function(response) {
+      console.log(response);
+    });
+}
